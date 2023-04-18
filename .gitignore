@@ -1,0 +1,5 @@
+#IDE stuff
+.vs
+#binaries and compiled files for csharp
+bin/
+obj/
