@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="2022\inputs\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="2022\inputs\input_d1.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>

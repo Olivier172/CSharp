@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Security.Cryptography;
 
 namespace aoc._2022
 {
     class Day1
     {
-        public List<int> ReadInput(string filepath)
+        public static List<int> ReadInput(string filepath)
         {
             //reads in the input file line by line and converts it into
             //a list of calorie sums that the elfes are carrying
@@ -43,13 +38,13 @@ namespace aoc._2022
             return calSums;
         }
 
-        public int findMaxCalorieCount(List<int> calSums) 
+        public static int FindMaxCalorieCount(List<int> calSums) 
         { 
             int maxCalorieCount = calSums.Max();
             return maxCalorieCount;
         }
 
-        public int findTopThreeCalorieCount(List<int> calSums)
+        public static int FindTopThreeCalorieCount(List<int> calSums)
         {
             int topThreeCalorieCount = 0;
             calSums.Sort();
@@ -62,19 +57,21 @@ namespace aoc._2022
             return topThreeCalorieCount;
         }
 
-        public Day1()
+        public static void Run()
         {
             string filepath = "../../../2022/inputs/input_d1.txt";
             List<int> calSums = ReadInput(filepath);
 
+            Console.WriteLine("Day1 solution in C#:");
+
             //part1
-            int maxCalorieCount = findMaxCalorieCount(calSums);
-            Console.WriteLine("The max calories an elf is carrying is " + maxCalorieCount);
+            int maxCalorieCount = FindMaxCalorieCount(calSums);
+            Console.WriteLine($"Part1: The max calories an elf is carrying is {maxCalorieCount}");
             //output: The max calories an elf is carrying is 70116.
 
             //part2 
-            int topThreeCalorieCount = findTopThreeCalorieCount(calSums);
-            Console.WriteLine("The top 3 elfs that are carrying the most calories, carry a total of " + topThreeCalorieCount + " calories");
+            int topThreeCalorieCount = FindTopThreeCalorieCount(calSums);
+            Console.WriteLine($"Part2: The top 3 elfs that are carrying the most calories, carry a total of {topThreeCalorieCount} calories\n");
             //output: The top 3 elfs that are carrying the most calories, carry a total of 206582 calories
         }
 

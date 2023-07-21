@@ -7,7 +7,10 @@ namespace Program
     {
         public static void Main(string[] args)
         {
-            Day1 code = new Day1();
+            //Use the static Run methode of a Dayxx.cs file to run the program for that day
+            
+            Day1.Run();
+            Day2.Run();
 
         }
     }
